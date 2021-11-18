@@ -1,15 +1,15 @@
 # Project information.
-cmake_minimum_required( VERSION 3.2.0 )
-project( TuyaIoTLinkSdkEmbeddedC
-         VERSION 202108.03
-         LANGUAGES C )
+#cmake_minimum_required( VERSION 3.2.0 )
+#project( TuyaIoTLinkSdkEmbeddedC
+#         VERSION 202108.03
+#         LANGUAGES C )
 
 # Allow the project to be organized into folders.
 set_property( GLOBAL PROPERTY USE_FOLDERS ON )
 
 # Use C90.
-set( CMAKE_C_STANDARD 90 )
-set( CMAKE_C_STANDARD_REQUIRED ON )
+#set( CMAKE_C_STANDARD 90 )
+#set( CMAKE_C_STANDARD_REQUIRED ON )
 
 # For debug
 add_compile_options( -g )
@@ -58,19 +58,19 @@ set( CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib )
 set( CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib )
 
 # Add platform.
-add_subdirectory( platform )
+include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/lib/tuya/platform )
 
 # Add middleware.
-add_subdirectory( middleware )
+include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/lib/tuya/middleware )
 
 # Add utils.
-add_subdirectory( utils )
+include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/lib/tuya/utils )
 
 # Add link core.
-add_subdirectory( src )
+include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/lib/tuya/src )
 
 # # Build the demos.
-add_subdirectory( examples )
+#add_subdirectory( examples )
 
 
 message(STATUS "------------------------------------------------------------" )

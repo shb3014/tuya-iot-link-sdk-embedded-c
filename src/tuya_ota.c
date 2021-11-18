@@ -44,7 +44,7 @@ static void file_download_event_cb(file_download_context_t* ctx, file_download_e
         uint8_t percent = ota_handle->file_download.received_size * 100 / ota_handle->file_download.file_size;
         TY_LOGD("File Download Percent: %d%%", percent);
         if (percent - ota_handle->progress_percent > 2) {
-            tuya_ota_upgrade_progress_report(ota_handle, percent);
+//            tuya_ota_upgrade_progress_report(ota_handle, percent);
             ota_handle->progress_percent = percent;
         }
         break;
@@ -53,10 +53,10 @@ static void file_download_event_cb(file_download_context_t* ctx, file_download_e
     case DL_EVENT_FINISH:
         TY_LOGD("DL_EVENT_FINISH");
         TY_LOGD("File Download Percent: %d%%", 100);
-        tuya_ota_upgrade_progress_report(ota_handle, 100);
+//        tuya_ota_upgrade_progress_report(ota_handle, 50);
         ota_handle->event.id = TUYA_OTA_EVENT_FINISH;
         event_cb(ota_handle, &ota_handle->event);
-        tuya_ota_upgrade_status_report(ota_handle, TUS_UPGRD_FINI);
+//        tuya_ota_upgrade_status_report(ota_handle, TUS_UPGRD_FINI);
         break;
 
     case DL_EVENT_FAULT:

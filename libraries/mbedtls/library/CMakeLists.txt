@@ -9,9 +9,7 @@ set(src_crypto
     aria.c
     asn1parse.c
     asn1write.c
-    base64.c
-    bignum.c
-    blowfish.c
+        blowfish.c
     camellia.c
     ccm.c
     chacha20.c

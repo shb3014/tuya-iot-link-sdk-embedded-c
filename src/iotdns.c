@@ -3,7 +3,7 @@
 #include "tuya_endpoint.h"
 #include "tuya_log.h"
 #include "cJSON.h"
-#include "base64.h"
+#include "tuya_base64.h"
 #include "tuya_error_code.h"
 #include "system_interface.h"
 #include "storage_interface.h"

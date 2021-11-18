@@ -11,7 +11,7 @@
 #include "cJSON.h"
 #include "aes_inf.h"
 #include "uni_md5.h"
-#include "base64.h"
+#include "tuya_base64.h"
 #include "atop_base.h"
 
 #define MD5SUM_LENGTH (16)
