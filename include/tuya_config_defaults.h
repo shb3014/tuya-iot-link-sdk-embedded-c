@@ -7,7 +7,8 @@
  * 
  */
 #ifndef ACTIVATE_BUFFER_LENGTH
-    #define ACTIVATE_BUFFER_LENGTH (8192U)
+//    #define ACTIVATE_BUFFER_LENGTH (8192U)
+    #define ACTIVATE_BUFFER_LENGTH (16384U)
 #endif
 
 /**
